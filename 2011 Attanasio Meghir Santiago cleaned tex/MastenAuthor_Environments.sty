@@ -1,0 +1,19 @@
+%%% Define theorem environments %%%
+
+\usepackage{amsthm}
+
+\@ifclassloaded{svmult} % The svmult class (book class from Springer) already defines its own theorems. So if we have that, then we don't need to define them.
+{
+}
+{
+\newtheorem{example}{Example}
+
+\theoremstyle{definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+}

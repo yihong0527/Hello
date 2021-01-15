@@ -1,0 +1,219 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Matt Masten's shortcuts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Packages for various symbols %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{amssymb} % Needed for mathbb
+\RequirePackage{amsmath} % This is needed for the DeclareMathOperator command used below
+\RequirePackage{latexsym}
+%\RequirePackage{mathabx}
+\RequirePackage{mathrsfs}
+\RequirePackage{varioref} % see page 69 of the latex companion
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Operators %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%adding the * makes it so you can have x \in D directly below Max
+\DeclareMathOperator*{\Span}{span}
+\DeclareMathOperator*{\ran}{ran}
+\DeclareMathOperator*{\Null}{null}
+\DeclareMathOperator*{\rank}{rank}
+\DeclareMathOperator*{\trace}{trace}
+
+% This new operator will center the underscored piece (e.g. $x \in [0,1]$ or $n \rightarrow \infty$) under the `min' rather than under `argmin'. The \! eliminates the space between the two if possible
+% But the downside is that there is a huge space between arg and min whenever the underscored piece is big.
+%\newcommand{\argmin}{\arg\!\min}
+\DeclareMathOperator*{\argmin}{argmin}
+
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argsup}{argsup}
+\DeclareMathOperator*{\arginf}{arginf}
+\DeclareMathOperator*{\Cl}{Cl}
+\DeclareMathOperator*{\Bd}{Bd}
+\DeclareMathOperator*{\Int}{Int}
+\DeclareMathOperator*{\cov}{cov}
+\DeclareMathOperator*{\var}{var}
+\DeclareMathOperator*{\stderr}{stderr}
+\DeclareMathOperator*{\plim}{plim}
+\DeclareMathOperator*{\supp}{supp}
+\DeclareMathOperator*{\sign}{sign}
+\DeclareMathOperator*{\diag}{diag}
+\DeclareMathOperator*{\conv}{conv}
+
+
+%vertical small d differential operator thing
+\newcommand{\diff}{\ensuremath{\mathrm{d}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Blackboard bold shortcuts %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\integers}{\ensuremath{\mathbb{Z}}} 
+\newcommand{\naturals}{\ensuremath{\mathbb{N}}}
+\newcommand{\rationals}{\ensuremath{\mathbb{Q}}}
+\newcommand{\field}{\ensuremath{\mathbb{F}}} % any field
+\newcommand{\complex}{\ensuremath{\mathbb{C}}}
+\newcommand{\Exp}{\ensuremath{\mathbb{E}}} % expectation
+\newcommand{\Prob}{\ensuremath{\mathbb{P}}} % probability
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Math script %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\calD}{\ensuremath{\mathcal{D}}}
+\newcommand{\Ps}{\ensuremath{\mathcal{P}}}  % power set
+\newcommand{\La}{\ensuremath{\mathcal{L}}}	% Lagrangian
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Matrix notation for econometrics %%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\0}{\ensuremath{\mathbf{0}}}
+
+\renewcommand{\a}{\ensuremath{\mathbf{a}}} % Lowercase
+\renewcommand{\b}{\ensuremath{\mathbf{b}}}
+\renewcommand{\c}{\ensuremath{\mathbf{c}}}
+\newcommand{\e}{\ensuremath{\mathbf{e}}}
+\newcommand{\f}{\ensuremath{\mathbf{f}}}
+\newcommand{\g}{\ensuremath{\mathbf{g}}}
+\newcommand{\h}{\ensuremath{\mathbf{h}}}
+\renewcommand{\l}{\ensuremath{\mathbf{l}}}
+\newcommand{\m}{\ensuremath{\mathbf{m}}}
+\newcommand{\p}{\ensuremath{\mathbf{p}}}
+\newcommand{\q}{\ensuremath{\mathbf{q}}}
+\renewcommand{\r}{\ensuremath{\mathbf{r}}}
+\newcommand{\s}{\ensuremath{\mathbf{s}}}
+\renewcommand{\t}{\ensuremath{\mathbf{t}}}
+\renewcommand{\u}{\ensuremath{\mathbf{u}}}
+\renewcommand{\v}{\ensuremath{\mathbf{v}}}
+\newcommand{\w}{\ensuremath{\mathbf{w}}}
+\newcommand{\x}{\ensuremath{\mathbf{x}}}
+\newcommand{\y}{\ensuremath{\mathbf{y}}}
+\newcommand{\z}{\ensuremath{\mathbf{z}}}
+
+\newcommand{\A}{\ensuremath{\mathbf{A}}} % Uppercase
+\newcommand{\B}{\ensuremath{\mathbf{B}}}
+\newcommand{\C}{\ensuremath{\mathbf{C}}}
+
+\@ifclassloaded{svmult} % The svmult class (book class from Springer) defines its own commands, so we have to overwrite them
+{
+\renewcommand{\D}{\ensuremath{\mathbf{D}}}
+\renewcommand{\E}{\ensuremath{\mathbf{E}}}
+\renewcommand{\I}{\ensuremath{\mathbf{I}}}
+}
+{
+\newcommand{\D}{\ensuremath{\mathbf{D}}}
+\newcommand{\E}{\ensuremath{\mathbf{E}}}
+\newcommand{\I}{\ensuremath{\mathbf{I}}}
+}
+  
+\newcommand{\F}{\ensuremath{\mathbf{F}}}
+\newcommand{\G}{\ensuremath{\mathbf{G}}}
+\renewcommand{\H}{\ensuremath{\mathbf{H}}}
+\newcommand{\J}{\ensuremath{\mathbf{J}}}
+\newcommand{\K}{\ensuremath{\mathbf{K}}}
+\renewcommand{\L}{\ensuremath{\mathbf{L}}}
+\newcommand{\M}{\ensuremath{\mathbf{M}}}
+\newcommand{\N}{\ensuremath{\mathbf{N}}}
+\renewcommand{\P}{\ensuremath{\mathbf{P}}}
+\newcommand{\Q}{\ensuremath{\mathbf{Q}}}
+\newcommand{\boldR}{\ensuremath{\mathbf{R}}}
+\renewcommand{\S}{\ensuremath{\mathbf{S}}}
+\newcommand{\T}{\ensuremath{\mathbf{T}}}
+\newcommand{\U}{\ensuremath{\mathbf{U}}}
+\newcommand{\V}{\ensuremath{\mathbf{V}}}
+\newcommand{\W}{\ensuremath{\mathbf{W}}}
+\newcommand{\X}{\ensuremath{\mathbf{X}}}
+\newcommand{\Y}{\ensuremath{\mathbf{Y}}}
+\newcommand{\Z}{\ensuremath{\mathbf{Z}}}
+
+%An alternate way of making bold letters:
+%\newcommand{\y}{\ensuremath{\boldsymbol{y}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Matrix notation for greek letters %%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\boldalpha}{\ensuremath{\boldsymbol{\alpha}}} % Lowercase
+\newcommand{\boldbeta}{\ensuremath{\boldsymbol{\beta}}}
+\newcommand{\boldgamma}{\ensuremath{\boldsymbol{\gamma}}}
+\newcommand{\bolddelta}{\ensuremath{\boldsymbol{\delta}}}
+\newcommand{\boldsigma}{\ensuremath{\boldsymbol{\sigma}}}
+\newcommand{\boldvarepsilon}{\ensuremath{\boldsymbol{\varepsilon}}}
+\newcommand{\boldzeta}{\ensuremath{\boldsymbol{\zeta}}}
+\newcommand{\boldeta}{\ensuremath{\boldsymbol{\eta}}}
+\newcommand{\boldtheta}{\ensuremath{\boldsymbol{\theta}}}
+\newcommand{\boldomega}{\ensuremath{\boldsymbol{\omega}}}
+\newcommand{\boldiota}{\ensuremath{\boldsymbol{\iota}}}
+\newcommand{\boldlambda}{\ensuremath{\boldsymbol{\lambda}}}
+\newcommand{\boldmu}{\ensuremath{\boldsymbol{\mu}}}
+\newcommand{\boldnu}{\ensuremath{\boldsymbol{\nu}}}
+\newcommand{\boldpi}{\ensuremath{\boldsymbol{\pi}}}
+\newcommand{\boldphi}{\ensuremath{\boldsymbol{\phi}}}
+\newcommand{\boldPhi}{\ensuremath{\boldsymbol{\Phi}}}
+\newcommand{\boldpsi}{\ensuremath{\boldsymbol{\psi}}}
+\newcommand{\boldxi}{\ensuremath{\boldsymbol{\xi}}}
+\newcommand{\boldtau}{\ensuremath{\boldsymbol{\tau}}}
+
+\newcommand{\boldGamma}{\ensuremath{\boldsymbol{\Gamma}}} % Uppercase
+\newcommand{\boldDelta}{\ensuremath{\boldsymbol{\Delta}}}
+\newcommand{\boldPi}{\ensuremath{\boldsymbol{\Pi}}}
+\newcommand{\boldSigma}{\ensuremath{\boldsymbol{\Sigma}}}
+\newcommand{\boldOmega}{\ensuremath{\boldsymbol{\Omega}}}
+\newcommand{\boldLambda}{\ensuremath{\boldsymbol{\Lambda}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Indicator function %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{bbm}
+\newcommand{\indicator}{\ensuremath{\mathbbm{1}}}
+
+% OTHER SUGGESTIONS FOR INDICATOR FUNCTIONS:
+% I also wanted a larger size because imo it looks better, which is possible by typing \begin{Large}$\mathbbm{1}$\end{Large} but this doesn't work inside a displaymath or equation environment. It's however possible to work around this by using \textrm:  
+   
+% \textrm{\begin{Large}$\mathbbm{1}$\end{Large}} makes a nice size indicator and works inside math mode, and also inside an equation or displaymath environment.
+
+%%%%%%%%%%%%%%%%%%%%% Misc econometrics %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% To distinguish functions y() from scalars y for Manski's treatment response material
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\newcommand{\scripty}{\ensuremath{\mathpzc{y}}}
+
+% Symbol for asymptotically distributed
+% NOTE: Need to eventually rename the stackrel relation
+\let\asymprate\asymp % Stores the original symbol, which is used to state rate conditions
+\renewcommand{\asymp}{\ensuremath{\stackrel{\text{a}}{\sim}}}
+
+% Normal distribution
+\newcommand{\normal}{\ensuremath{\mathcal{N}}}
+
+% add the double perpendicular symbol for statistical independence
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+
+
+
+
+\makeatletter
+\newcommand*{\indep}{%
+  \mathbin{%
+    \mathpalette{\@indep}{}%
+  }%
+}
+\newcommand*{\nindep}{%
+  \mathbin{%                   % The final symbol is a binary math operator
+    \mathpalette{\@indep}{\not}% \mathpalette helps for the adaptation
+                               % of the symbol to the different math styles.
+  }%
+}
+\newcommand*{\@indep}[2]{%
+  % #1: math style
+  % #2: empty or \not
+  \sbox0{$#1\perp\m@th$}%        box 0 contains \perp symbol
+  \sbox2{$#1=$}%                 box 2 for the height of =
+  \sbox4{$#1\vcenter{}$}%        box 4 for the height of the math axis
+  \rlap{\copy0}%                 first \perp
+  \dimen@=\dimexpr\ht2-\ht4-.2pt\relax
+      % The equals symbol is centered around the math axis.
+      % The following equations are used to calculate the
+      % right shift of the second \perp:
+      % [1] ht(equals) - ht(math_axis) = line_width + 0.5 gap
+      % [2] right_shift(second_perp) = line_width + gap
+      % The line width is approximated by the default line width of 0.4pt
+  \kern\dimen@
+  {#2}%
+      % {\not} in case of \nindep;
+      % the braces convert the relational symbol \not to an ordinary
+      % math object without additional horizontal spacing.
+  \kern\dimen@
+  \copy0 %                       second \perp
+} 
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% End shortcuts file %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
