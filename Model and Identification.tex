@@ -1,0 +1,144 @@
+\documentclass{handoutForSolutions}
+%\SetInstructor{name here}
+\SetCourseTitle{Yihong Liu}
+\SetSemester{Attanasio, Meghir \& Santiago (2011)}
+%\SetHandoutTitle{Right top}
+%\SetDueDate{\today Right bottom}
+
+\usepackage{MastenAuthor_Environments}
+\usepackage{MastenAuthor_Boxes}
+\usepackage{MastenShortcuts}
+\usepackage{MnSymbol}
+\usepackage{amsmath, bm}
+\usepackage{float}
+\usepackage{ulem}
+\normalem
+
+
+
+% For manually numbering results
+\usepackage{thmtools}
+\declaretheoremstyle[notefont=\bfseries,notebraces={}{},%
+    headpunct={},postheadspace=1em]{mystyle}
+\declaretheorem[style=mystyle,numbered=no,name=Theorem]{theorem_hand_numbered}
+\declaretheorem[style=mystyle,numbered=no,name=Lemma]{lemma_hand_numbered}
+\declaretheorem[style=mystyle,numbered=no,name=Proposition]{proposition_hand_numbered}
+\declaretheorem[style=mystyle,numbered=no,name=Assumption]{assumption_hand_numbered}
+\declaretheorem[style=mystyle,numbered=no,name=Corollary]{corollary_hand_numbered}
+\declaretheorem[style=mystyle,numbered=no,name=Definition]{definition_hand_numbered}
+\declaretheorem[style=mystyle,numbered=no,name=Condition]{condition_hand_numbered}
+
+\newenvironment{theoremboxed_hand_numbered}{\begin{mdframed}\begin{theorem_hand_numbered}}{\end{theorem_hand_numbered}\end{mdframed}}
+\newenvironment{lemmaboxed_hand_numbered}{\begin{mdframed}\begin{lemma_hand_numbered}}{\end{lemma_hand_numbered}\end{mdframed}}
+\newenvironment{propositionboxed_hand_numbered}{\begin{mdframed}\begin{proposition_hand_numbered}}{\end{proposition_hand_numbered}\end{mdframed}}
+\newenvironment{corollaryboxed_hand_numbered}{\begin{mdframed}\begin{corollary_hand_numbered}}{\end{corollary_hand_numbered}\end{mdframed}}
+
+
+
+\begin{document}
+
+
+\begin{center}
+{ \normalfont \Large \textbf{Education Choices in Mexico:
+Using a Structural Model and a Randomized Experiment to Evaluate PROGRESA} }\\
+\vspace{3mm}
+{ \large \textbf{Model and Identification} }
+\end{center}
+
+
+Attanasio (2011) paper presents three models. The first one is the Education Choice model, which is used to identify the effect of the PROGRESA grant on school participation. This model is also the main structural model of this paper. The other two models are two reduced form equations to model the potential wage and initial education attainment of the individuals in the sample because these two variables are unobservable from the data.
+
+Compared to the original model in the Attanasio (2011) paper, the model I presented here is a simplified version while at the same time keep the essence of the original one. The simplification mainly involves changing a T periods dynamic problem into a two periods one and substituting the vector covariates into a scalar one. Meanwhile, I revise the notation of the original paper to make it compatible with the simplified model. Moreover, some of the words and descriptions in the original paper are replaced with equations and formal assumptions. 
+\section{Main Model: Education Choice Model}
+In this simplified version of education choice model, there are only two periods. In period one, students choose either go to school or to work and receive an instantaneous utility. In period two, they reap a terminal utility defined by the terminal value function. Assume that all students will choose in the way to maximize their total present value of the utility.
+\subsection{Period one: Instantaneous utilities from schooling and work}
+Let $u_i^s$ represent the instantaneous utilities student i gets if he/she chooses to go to school in period one. Then we have:
+$$
+u_{i}^{s}=Y_{i}^{s}+\alpha g_{i},
+$$
+\begin{center}
+$Y_{i}^{s}=\mu_{i}^{s}+\beta_1^{s}z_{i}+\beta_2^{s}\mathrm{e}\mathrm{d}_{i}+1(p_{i}=1)\beta_{3}x_{i}^{p}+1(s_{i}=1)\beta_{4}x_{i}^{s}+\epsilon_{i}^{s}$,   (1)
+\end{center}
+where $g_{i}$ is the amount of the grant an individual is entitled to; it will be equal to zero for non-eligible individuals and control localities. $Y_{i}^{s}$ represents the individual's remaining utility from attending school. $z_{i}$ is a scalar of taste shifter variables. The variable $1(p_{i}=1)$ denotes attendance in primary school, while the variable $1(s_{i}=$ 1) denotes attendance in secondary school. $x_{i}^{\mathrm{p}}$ and $x_{i}^{\mathrm{s}}$ represent factors affecting the costs of attending primary school and secondary school, respectively. The term $\epsilon_{i}^{\mathrm{s}}$ represents the preference shock. Each individual knows his/her own preference shock but this shock is unobservable to econometricians. $\mathrm{e}\mathrm{d}_{i}$ represents individuals' current education attainment and this variable is unobservable from the data. $\mu_i^s$ represents individual's unobserved heterogeneity that could influence both the current and past schooling choice of individuals.
+
+Similarly, the instantaneous utility of going to work is denoted by $u_i^w$, with the following expressions:
+$$
+u_{i}^{\mathrm{w}}=Y_{i}^{\mathrm{w}}+\delta\omega_{i},
+$$
+\begin{center}
+$Y_{i}^{\mathrm{w}}=\mu_{i}^{\mathrm{w}}+\beta_1^{w}z_{i}+\beta_2^{\mathrm{w}}\mathrm{e}\mathrm{d}_{i}+\epsilon_{i}^{\mathrm{w}}$ ,   (2)
+\end{center}
+where $\omega_{i}$ are the potential wage when individual i is out of school. The wage, especially the wage for those students attending the school is not observable, so it has to be estimated.\\
+Since the numerical value of the utility does not matter, so  without loss of generality, set $Y_{i}^w=0$, then we can rewrite equations (1) and (2) as follows:
+\begin{gather*}
+    u_{i}^{\mathrm{s}}=\gamma\delta g_{i}+\mu_{i}+\beta_{1}z_{i}+\beta_2\mathrm{e}\mathrm{d}_{i}+1(p_{i}=1)\beta_{3}x_{it}^{\mathrm{p}}+1(s_{i}=1)\beta_{4}x_{it}^{\mathrm{s}}+\epsilon_{i}, (3)\\
+u_{i}^{\mathrm{w}}=\delta\omega_{i}, (4)
+\end{gather*}
+,where $\beta_1=\beta_1^s-\beta_1^w, \beta_2=\beta_2^s-\beta_2^w, \gamma =\alpha/\delta, \mu_{i}=\mu_{i}^{\mathrm{s}}-\mu_{i}^{\mathrm{w}}$ , and $\epsilon_{i}=\epsilon_{i}^{\mathrm{s}}-\epsilon_{it}^{\mathrm{w}}$. $\epsilon_{i}$ is the difference between two random preference shock and we assume it is distributed as a standard logistic across the population. The model also assumes that $\mu_{i}$ is a discrete random variable whose points of support and probabilities will be estimated empirically. The coefficient $\gamma$ measures the impact of the grant as a proportion of the impact of the wage on the education decision. If $\gamma =1$ , the effect of the grant on utility and therefore on schooling choices would be the same as that of the wage.
+
+
+
+\subsection{Period Two: Terminal Value Function and Total Utility}
+In period two, the dynamic problem ends and students reap a terminal utility defined by the terminal value function $V(.)$. The paper models terminal value function in the following way:
+$$
+V(\mathrm{e}\mathrm{d}_{i,2})=\frac{\alpha_ 1}{1+exp(-\alpha_2*\mathrm{e}\mathrm{d}_{i,2})},
+$$
+where $\mathrm{e}\mathrm{d}_{i,2}$ is the education level achieved by period 2. $\alpha_1$ and $\alpha_2$ are parameters and are constrained to be non-negative.\\
+If a student chooses to go to school in period one, he/she may not be successful in completing the grade and the level of education does not increase in this case. This model assumes that the probability of failing a grade is exogenous and is only correlated with the grade to be completed and the age of the individual. To simplify, I denote the probability of individual i completing the next grade by $p_i$. Therefore, the total utility $V_i^s$ for student i who chooses to go to school in period one is:
+\begin{equation*}
+\begin{split}
+    V_{i}^{\mathrm{s}}&=u_{i}^\mathrm{s}+r[p_{i}V(ed_i+1)+(1-p_{i})V(ed_i)]
+\end{split}
+\end{equation*}
+Here $r$ is the discount rate and $V(.)$ is the terminal function defined above. $r$ is also a parameter that should be estimated.\\
+The total utility value for student i who chooses to work in period one is:
+\begin{equation*}
+\begin{split}
+     V_{i}^{w}=u_i^w+r V(ed_i)
+\end{split}
+\end{equation*}
+Let $D_i$ represent the choice of individual i in period one, $D_i =1$ if the individual chooses to go to school and equals to 0 if the individual chooses to work. Then we have:
+\begin{equation*}
+\begin{split}
+  D_i&=1[V_i^s>V_i^w]\\
+    &=1[u_{i}^\mathrm{s}+r[p_{i}V(ed_i+1)+(1-p_{i})V(ed_i)]>u_i^w+rV(ed_i)]\\
+    &=1[(u_i^s-u_i^w)+rp_i(V(ed_i+1)-V(ed_i))>0]  
+\end{split}
+\end{equation*}
+
+
+
+\newpage
+\section{Two Minor Models}
+As is mentioned above, individuals' current level of educational attainment and the potential wage are not observable, so Attanasio (2011) constructs the following two models to estimate them.
+\subsection{Initial Condition Model}
+The initial condition model modelled the level of schooling already attained ($ed_i$) by student i by an ordered probit with index function $\beta_5 h_i+\beta_6 \mu_i+\epsilon^{ed}_i$, where $h_i$ is a scalar observed variables affecting schooling decisions. $\mu_i$ is the unobserved heterogeneity defined in section 1.1. $\epsilon^{ed}_i$ is the random shock, which is assumed to be distributed as standard normal across the population conditional on $\mu_i$. The model allows for thresholds that change with students' age and further assumes that the probability of $\mathrm{e}\mathrm{d}_{i}=e$ and of student $i$ attending school $(D_i=1)$ to be:
+\begin{gather*}
+        P(ed_i=e, D_i=1|z_i,\ x_i^p,\ x_i^s,\ h_i,\  wage_i,\ \mu_i)\\= P(D_i=1|z_i,\ x_i^p,\ x_i^s,\ ed_i,\  wage_i,\ \mu_i)*P(ed_i=e|z_i,\ x_i^p,\ x_i^s,\ h_i,\  wage_i,\ \mu_i)
+\end{gather*}
+The parameters $\beta_5$, $\beta_6$ of the initial condition model will be estimated jointly with the main model above.
+\subsection{Potential Wage Model}
+The original paper uses the following models to estimate the potential wages of students. First, they specify a standard Mincer-type wage equation, where the wage ($\omega_{ij}$) of a student $i$ living in community $j$ is determined by his age and education according to
+\begin{center}
+$\ln\omega_{ij}=q_{j}+a_1\mathrm{a}\mathrm{g}\mathrm{e}_{i}+a_2\mathrm{e}\mathrm{d}\mathrm{u}\mathrm{c}_{i}+\Bar{\omega}_{ij}$,   (4)
+\end{center}
+where $q_{j}$ represents the log price of human capital in the locality and $\Bar{\omega}_{ij}$ is the residual. The paper follows the Heckman (1979) selection correction approach to specify equation (4). The inverse Mills ratio ($Mills_i$) is added into the regression and is constructed by estimating a reduced-form probit for school attendance as a function of the variables including in the main model. These include measures of the availability and cost of schools in the locality where the child lives, which controls among others for whether this is an experimental locality or not. Finally, they model $q_{j}$ in equation (4) as a function of the male agricultural wage $\omega^{ag}_j$ in community j and whether the program was implemented in that community ($P_j$).\\ 
+
+This model is estimated separately from the main model and the author assumes that individuals in the main model will use the point estimation of wages and ignore any variance around them.The resulting wage equation and estimation of wage for student $i$ living in community $j$ has the form:
+$$
+\ln\omega_{ij}=\mathop{-0.983}\limits_{(0.384)}+\mathop{0.0605P_{j}}\limits_{(0.028)}+\mathop{0.883}\limits_{(0.049)}\ln\omega^{\mathrm{a}\mathrm{g}}_j+\mathop{0.066}\limits_{(0.027)}\mathrm{a}\mathrm{g}\mathrm{e}_{i}
+$$
+\begin{center}
+$+\mathop{0.0116}\limits_{(0.0065)}$$\mathrm{educ}_i$ -$\mathop{0.056}\limits_{(0.053)}\mathrm{M}\mathrm{i}\mathrm{l}\mathrm{l}\mathrm{s}_{i}+\Bar{\omega}_{ij}$,   (5)
+\end{center}
+
+\newpage
+\section{Identification}
+The main identification problem of this paper is to jointly identify the parameters of the Education Choice Model and the initial condition model. In the Education Choice model, the parameters to be identified are: $\gamma$, $\delta$, $\beta_1$, $\beta_2$, $\beta_3$, $\beta_4$, $\alpha_1$, $\alpha_2$, $r$ and the distribution of $\mu_i$. In the initial condition model, the parameters to be identified are: $\beta_5$, $\beta_6$.\\
+
+Identification Proof:（I am still working on the proof of Identification).
+
+
+
+\end{document}
+
