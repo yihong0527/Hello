@@ -48,7 +48,7 @@ Using a Structural Model and a Randomized Experiment to Evaluate PROGRESA} }\\
 
 Attanasio (2011) paper presents three models. The first one is the Education Choice model, which is used to identify the effect of the PROGRESA grant on school participation. This model is also the main structural model of this paper. The other two models are two reduced form equations to model the potential wage and initial education attainment of the individuals in the sample because these two variables are unobservable from the data.
 
-Compared to the original model in the Attanasio (2011) paper, the model I presented here is a simplified version while at the same time keep the essence of the original one. The simplification mainly involves changing a T periods dynamic problem into a two periods one and substituting the vector covariates into a scalar one. Meanwhile, I revise the notation of the original paper to make it compatible with the simplified model. Moreover, some of the words and descriptions in the original paper are replaced with equations and formal assumptions. 
+Compared to the original model in the Attanasio (2011) paper, the model I presented here is a simplified version while at the same time keep the essence of the original one. The simplification mainly involves changing a T periods dynamic problem into a two periods one and substituting the vector covariates into a scalar one. Meanwhile, I revise the notation of the original paper to make it compatible with the simplified model. Moreover, some of the words and descriptions in the original paper are replaced with equations and formal assumptions.
 \section{Main Model: Education Choice Model}
 In this simplified version of education choice model, there are only two periods. In period one, students choose either go to school or to work and receive an instantaneous utility. In period two, they reap a terminal utility defined by the terminal value function. Assume that all students will choose in the way to maximize their total present value of the utility.
 \subsection{Period one: Instantaneous utilities from schooling and work}
@@ -102,7 +102,7 @@ Let $D_i$ represent the choice of individual i in period one, $D_i =1$ if the in
 \begin{split}
   D_i&=1[V_i^s>V_i^w]\\
     &=1[u_{i}^\mathrm{s}+r[p_{i}V(ed_i+1)+(1-p_{i})V(ed_i)]>u_i^w+rV(ed_i)]\\
-    &=1[(u_i^s-u_i^w)+rp_i(V(ed_i+1)-V(ed_i))>0]  
+    &=1[(u_i^s-u_i^w)+rp_i(V(ed_i+1)-V(ed_i))>0]
 \end{split}
 \end{equation*}
 
@@ -122,7 +122,7 @@ The original paper uses the following models to estimate the potential wages of 
 \begin{center}
 $\ln\omega_{ij}=q_{j}+a_1\mathrm{a}\mathrm{g}\mathrm{e}_{i}+a_2\mathrm{e}\mathrm{d}\mathrm{u}\mathrm{c}_{i}+\Bar{\omega}_{ij}$,   (4)
 \end{center}
-where $q_{j}$ represents the log price of human capital in the locality and $\Bar{\omega}_{ij}$ is the residual. The paper follows the Heckman (1979) selection correction approach to specify equation (4). The inverse Mills ratio ($Mills_i$) is added into the regression and is constructed by estimating a reduced-form probit for school attendance as a function of the variables including in the main model. These include measures of the availability and cost of schools in the locality where the child lives, which controls among others for whether this is an experimental locality or not. Finally, they model $q_{j}$ in equation (4) as a function of the male agricultural wage $\omega^{ag}_j$ in community j and whether the program was implemented in that community ($P_j$).\\ 
+where $q_{j}$ represents the log price of human capital in the locality and $\Bar{\omega}_{ij}$ is the residual. The paper follows the Heckman (1979) selection correction approach to specify equation (4). The inverse Mills ratio ($Mills_i$) is added into the regression and is constructed by estimating a reduced-form probit for school attendance as a function of the variables including in the main model. These include measures of the availability and cost of schools in the locality where the child lives, which controls among others for whether this is an experimental locality or not. Finally, they model $q_{j}$ in equation (4) as a function of the male agricultural wage $\omega^{ag}_j$ in community j and whether the program was implemented in that community ($P_j$).\\
 
 This model is estimated separately from the main model and the author assumes that individuals in the main model will use the point estimation of wages and ignore any variance around them.The resulting wage equation and estimation of wage for student $i$ living in community $j$ has the form:
 $$
@@ -136,9 +136,8 @@ $+\mathop{0.0116}\limits_{(0.0065)}$$\mathrm{educ}_i$ -$\mathop{0.056}\limits_{(
 \section{Identification}
 The main identification problem of this paper is to jointly identify the parameters of the Education Choice Model and the initial condition model. In the Education Choice model, the parameters to be identified are: $\gamma$, $\delta$, $\beta_1$, $\beta_2$, $\beta_3$, $\beta_4$, $\alpha_1$, $\alpha_2$, $r$ and the distribution of $\mu_i$. In the initial condition model, the parameters to be identified are: $\beta_5$, $\beta_6$.\\
 
-Identification Proof:（I am still working on the proof of Identification).
+Identification Proof: (I am still working on the proof of Identification).
 
 
 
 \end{document}
-
